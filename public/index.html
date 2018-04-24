@@ -1,0 +1,103 @@
+<!doctype html>
+<html ng-app="riipenapp">
+<head>
+    <meta charset="utf-8">
+    <!-- Optimize mobile viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Riipen App</title>
+    <!-- load bootstrap -->
+    <!-- Bootstrap core CSS -->
+
+    <!-- Custom styles for this template -->
+    <link href="css/riipen-styles.css" rel="stylesheet">
+    <!-- load angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-sanitize.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/ui-bootstrap-tpls-1.1.2.min.js"></script>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="./controllers/assignmentsController.js"></script>
+    <script src="./controllers/portalsController.js"></script>
+    <script src="./controllers/detailsController.js"></script>
+    <script src="./controllers/mainController.js"></script>
+    <script src="./js/app.js"></script>
+
+</head>
+
+<body ng-controller="mainController">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Riipen</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto" style="margin-left: 40px !Important">
+            <li class="nav-item active">
+              <a class="nav-link" href="#assignments">In-Class Assignments
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portals">Portals</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation End-->
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+          <div class="col-lg-3" style="background-color: aliceblue;">
+
+          <h3 class="my-4">Refine Search</h3>
+          <div class="list-group">
+              <a href="" class="badge badge-pill badge-secondary" style="margin-bottom: 3px;width: fit-content; line-height: 15px" ng-click="getByTag(505)">Information Technology</a>
+              <a href="" class="badge badge-pill badge-secondary" style="margin-bottom: 3px;width: fit-content; line-height: 15px">Computer Science</a>
+              <a href="" class="badge badge-pill badge-secondary" style="margin-bottom: 3px;width: fit-content; line-height: 15px">Project Management</a>
+              <a href="" class="badge badge-pill badge-secondary" style="margin-bottom: 3px;width: fit-content; line-height: 15px">Engineering</a>
+              <a href="" class="badge badge-pill badge-secondary" style="margin-bottom: 3px;width: fit-content; line-height: 15px">Product Development</a>
+              <a href="" class="badge badge-pill badge-secondary" style="margin-bottom: 3px;width: fit-content; line-height: 15px">Software Development</a>
+              <a href="" class="badge badge-pill badge-secondary" style="margin-bottom: 3px;width: fit-content; line-height: 15px">Graphic Design</a>
+              <a href="" class="badge badge-pill badge-secondary" style="margin-bottom: 3px;width: fit-content; line-height: 15px">Communications</a>
+          </div>
+
+        </div>
+        <!-- /.col-lg-3 -->
+        
+        <div class="col-lg-9" style="min-height: 1000px" ng-view>
+            
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Riipen 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+ 
+        <!-- Bootstrap core JavaScript -->
+    
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

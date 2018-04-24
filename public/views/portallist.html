@@ -1,0 +1,30 @@
+<!--Search Box-->
+<div class="container" style="margin-top: 20px; margin-bottom: 10px">
+    <form ng-submit="searchSubmit()" class="form-inline">
+    <div class="form-group mx-sm-3">
+      <label for="searchBox" class="sr-only">Search...</label>
+      <input type="text" ng-model="query" name="text" class="form-control" id="searchBox" placeholder="Search...">
+    </div>
+    <input type="submit" id="submit" value="Submit" class="btn btn-primary" />
+  </form>
+</div>
+<!--Search Box End-->
+
+<!--ruler-->
+<hr>
+
+<div class="row"  id="rowList">
+  <div class="col-lg-4 col-md-6 mb-4" ng-repeat="portal in portals.data">
+    <div class="card h-100">
+      <div class="card-body">
+        <h4 class="card-title">
+          <a href="">{{portal.name}}</a>
+        </h4>
+          <div ng-bind-html="portal.biography"></div>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">TF/IDF: {{portal.score}}</small>
+      </div>
+    </div>
+    </div>
+</div>
